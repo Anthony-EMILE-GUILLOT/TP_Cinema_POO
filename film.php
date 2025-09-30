@@ -15,8 +15,32 @@ class Film
 
     public function getIdFilm(): int
     {
-        return $this->$idFilm;
+        return $this->idFilm;
     }
 
-    
+    public function getNomFilm(): string
+    {
+        return $this->nomFilm;
+    }
+
+    public function getNdEntrees(): int
+    {
+        return $this->nbEntrees;
+    }
+
+    public function setIdFilm(int $idFilm): void
+    {
+        $this->idFilm = idFilm;
+    }
+
+    public function setNomFilm(string $nomFilm): void
+    {
+        $this->nomFilm = $nomFilm;
+    }
+
+    public function setNbEntrees(int $nbEntrees): void
+    {
+        $this->nbEntrees = $nbEntrees;
+    }
+
 }
