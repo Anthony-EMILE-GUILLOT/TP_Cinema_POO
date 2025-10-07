@@ -13,6 +13,8 @@ $nbLigneTab = count($listeFilm);
 $real1 = new Realisateur("Jimenez", "Cédric");
 $real2 = new Realisateur("Gozian", "Yann");
 $real3 = new Realisateur("Reeves", "Matt");
+
+/*
 $listeReal = array($real1, $real2, $real3);
 
 for($listCount=0; $listCount < $nbLigneTab; $listCount++)
@@ -21,4 +23,9 @@ for($listCount=0; $listCount < $nbLigneTab; $listCount++)
         echo "Infos sur le film ==>\n" . $listeFilm[$listCount]->getIdFilm()." - ".$listeFilm[$listCount]->getNomFilm()." - ".$listeFilm[$listCount]->getNdEntrees()." - ".$realFilm->getPrenom()." - ".$realFilm->getNom()."\n";
     }
 
- 
+ */
+
+for($listCount=0; $listCount < $nbLigneTab; $listCount++)
+    {
+        echo "Infos sur le film ==>\n" . $listeFilm[$listCount]->getIdFilm()." - ".$listeFilm[$listCount]->getNomFilm()." - ".$listeFilm[$listCount]->getNdEntrees()."\n";
+    }
