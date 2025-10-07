@@ -45,4 +45,13 @@ class Film
         $this->nbEntrees = $nbEntrees;
     }
 
+    public function getReal(): Realisateur
+    {
+        return $this->real;
+    }
+    
+    public function setReal(Realisateur $real): void
+    {
+        $this->real = $real;
+    }
 }
