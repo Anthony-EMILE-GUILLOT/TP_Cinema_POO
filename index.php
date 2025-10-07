@@ -21,4 +21,4 @@ for($listCount=0; $listCount < $nbLigneTab; $listCount++)
         echo "Infos sur le film ==>\n" . $listeFilm[$listCount]->getIdFilm()." - ".$listeFilm[$listCount]->getNomFilm()." - ".$listeFilm[$listCount]->getNdEntrees()." - ".$realFilm->getPrenom()." - ".$realFilm->getNom()."\n";
     }
 
-    
+ 
