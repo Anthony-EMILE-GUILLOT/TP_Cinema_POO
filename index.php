@@ -18,9 +18,13 @@ $acteur7 = new Acteur("Pattinson", "Robert", true);
 $acteur8 = new Acteur("Kravitz", "Zoë", false);
 $acteur9 = new Acteur("Dano", "Paul", false);
 
-$premierFilm = new Film(1, "Bac Nord", 563921, $real1);
-$secondFilm = new Film(2, "Boîte noire", 432789, $real2);
-$troisiemeFilm = new Film(3, "The Batman", 879214, $real3);
+$listeActeurs1 = array($acteur1, $acteur2, $acteur3);
+$listeActeurs2 = array($acteur4, $acteur5, $acteur6);
+$listeActeurs3 = array($acteur7, $acteur8, $acteur9);
+
+$premierFilm = new Film(1, "Bac Nord", 563921, $real1, $listeActeurs1);
+$secondFilm = new Film(2, "Boîte noire", 432789, $real2, $listeActeurs2);
+$troisiemeFilm = new Film(3, "The Batman", 879214, $real3, $listeActeurs3);
 
 $listeFilm = array($premierFilm, $secondFilm, $troisiemeFilm);
 $nbLigneTab = count($listeFilm);
@@ -38,6 +42,18 @@ for($listCount=0; $listCount < $nbLigneTab; $listCount++)
 
 for($listCount=0; $listCount < $nbLigneTab; $listCount++)
     {
-        echo "Infos sur le film ==>\n" . $listeFilm[$listCount]->getIdFilm()." - ".$listeFilm[$listCount]->getNomFilm()." - ".$listeFilm[$listCount]->getNdEntrees()." - ".$listeFilm[$listCount]->getReal()->getPrenom()." - ".$listeFilm[$listCount]->getReal()->getNom()."\n";
+        echo "Infos sur le film ==>\n" . $listeFilm[$listCount]->getIdFilm()." - ".$listeFilm[$listCount]->getNomFilm()." - ".$listeFilm[$listCount]->getNdEntrees()." - ".$listeFilm[$listCount]->getReal()->getPrenom()." - ".$listeFilm[$listCount]->getReal()->getNom()."\nListe des acteurs ==>\n";
+        foreach($listeFilm[$listCount]->getListeActeurs() as $acteur)
+        {
+            echo $acteur->getPrenom()." - ".$acteur->getNom()." - ";
+            if ($acteur->isEstCesarise())
+            {
+                echo "true\n";
+            }
+            else
+            {
+                echo "false\n";
+            }
+        }
+        echo "\n";
     }
-
