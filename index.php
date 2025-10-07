@@ -2,10 +2,21 @@
 
 include 'film.php';
 include 'realisateur.php';
+include 'acteur.php';
 
 $real1 = new Realisateur("Jimenez", "Cédric");
 $real2 = new Realisateur("Gozian", "Yann");
 $real3 = new Realisateur("Reeves", "Matt");
+
+$acteur1 = new Acteur("Lellouche", "Gilles", false);
+$acteur2 = new Acteur("Civil", "François", false);
+$acteur3 = new Acteur("Leklou", "Karim", true);
+$acteur4 = new Acteur("Niney", "Pierre", true);
+$acteur5 = new Acteur("De Laâge", "Lou", false);
+$acteur6 = new Acteur("Dussolier", "André", true);
+$acteur7 = new Acteur("Pattinson", "Robert", true);
+$acteur8 = new Acteur("Kravitz", "Zoë", false);
+$acteur9 = new Acteur("Dano", "Paul", false);
 
 $premierFilm = new Film(1, "Bac Nord", 563921, $real1);
 $secondFilm = new Film(2, "Boîte noire", 432789, $real2);
