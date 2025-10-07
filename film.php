@@ -5,12 +5,14 @@ class Film
     private int $idFilm;
     private string $nomFilm;
     private int $nbEntrees;
+    private Realisateur $real;
 
-    public function __construct(int $idFilm, string $nomFilm, int $nbEntrees)
+    public function __construct(int $idFilm, string $nomFilm, int $nbEntrees, Realisateur $real)
     {
         $this->idFilm = $idFilm;
         $this->nomFilm = $nomFilm;
         $this->nbEntrees = $nbEntrees;
+        $this->real = $real;
     }
 
     public function getIdFilm(): int
